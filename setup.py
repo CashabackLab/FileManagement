@@ -9,7 +9,7 @@ setup(
     # Needed to actually package something
     packages=['statistics'],
     # Needed for dependencies
-    install_requires=['numpy', 'os', 'pickle'],
+    install_requires=['numpy', 'pickle'],
     # *strongly* suggested for sharing
     version='0.1',
     # The license can be anything you like
