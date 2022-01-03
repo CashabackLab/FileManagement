@@ -15,5 +15,5 @@ setup(
     # The license can be anything you like
     license='UD',
     description='Python package for managing file input/output and file saving, tailored for the Cashaback Lab',
-    long_description=open('README.txt').read(),
+    long_description=open('README.md').read(),
 )
