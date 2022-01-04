@@ -7,7 +7,7 @@ setup(
     author='CashabackLab',
     author_email='cashabacklab@gmail.com',
     # Needed to actually package something
-    packages=['varName', 'fileio'],
+    packages=['file_management'],
     # Needed for dependencies
     install_requires=['numpy', 'pickle'],
     # *strongly* suggested for sharing
