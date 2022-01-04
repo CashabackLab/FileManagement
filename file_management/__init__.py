@@ -1,2 +1,2 @@
 from . import fileio
-from . import varName
+from .varName import *
