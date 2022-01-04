@@ -4,7 +4,7 @@ def varName(p):
     p: variable of any type
     """
     temp_global = globals()
-    for k, v in temp_global: print(k)
+    for k, v in temp_global.items(): print(k)
     for k, v in temp_global.items():
         if id(p) == id(v):
             return k
