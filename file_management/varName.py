@@ -1,10 +1,9 @@
-def varName(p):
+def varName(p, name_space = globals()):
     """
     Return name of the variable as a string
     p: variable of any type
     """
-    temp_global = globals()
-    for k, v in temp_global.items(): print(k)
-    for k, v in temp_global.items():
+    for k, v in name_space.items(): print(k)
+    for k, v in name_space.items():
         if id(p) == id(v):
             return k
