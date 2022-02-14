@@ -40,7 +40,7 @@ def get_most_recent_file(path, key_string = "loss"):
                                     most_recent_time = time
                                     most_recent_file = filename
                                     
-        if not key_string_flag: raise FileNotFoundError(f"No file with key_string "{key_string}" exists.")
+        if not key_string_flag: raise FileNotFoundError(f"No file with key_string \"{key_string}\" exists.")
         if not date_flag: raise FileNotFoundError("No file with properly formatted date found.")
           
         return most_recent_file
