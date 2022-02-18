@@ -1,8 +1,9 @@
 import os
 import os.path
 
-def normalize_path(path):
-  """Normalizes path variables for your OS"""
+def normpath(path):
+  """Shorthand for os.path.normpath()
+  Normalizes path variables for your OS"""
   return os.path.normpath(path)
 
 def get_most_recent_file(path, key_string = "loss"):
