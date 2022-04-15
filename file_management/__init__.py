@@ -2,3 +2,5 @@
 #i.e. file_management.varName()
 from .varName import *
 from .fileio import *
+from .nameof import nameof
+from .copyfolderstruct import *
