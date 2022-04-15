@@ -4,3 +4,4 @@ from .varName import *
 from .fileio import *
 from .nameof import nameof
 from .copyfolderstruct import *
+from .reloadpackage import reloadpackage
