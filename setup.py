@@ -9,9 +9,9 @@ setup(
     # Needed to actually package something
     packages=['file_management'],
     # Needed for dependencies
-    install_requires=['numpy'],
+    install_requires=['numpy', 'varname'],
     # *strongly* suggested for sharing
-    version='0.2.2',
+    version='0.2.3',
     # The license can be anything you like
     license='MIT',
     description='Python package for managing file input/output and file saving, tailored for the Cashaback Lab',
