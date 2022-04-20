@@ -9,7 +9,7 @@ def varName(p, name_space = None):
     NOTE: must specify name_space = globals() when calling the function, should not be omitted
     """
     if name_space == None:
-        Raise ValueError("Must set name_space = globals()")
+        raise ValueError("Must set name_space = globals()")
         
     for k, v in name_space.items():
         if id(p) == id(v):
