@@ -1,6 +1,6 @@
 #allows usage of the function from the package name directly
 #i.e. file_management.varName()
-from . import Roth_FM
+import Roth_FM
 
 from .varName import *
 from .fileio import *
