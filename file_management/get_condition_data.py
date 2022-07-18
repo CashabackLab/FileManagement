@@ -1,7 +1,7 @@
 import pandas as pd
 import os, fnmatch, re
 
-def get_condition_data(subjectID, folderPath, exp_name, TP_row = 1, num_trials = 200, only_events = False):
+def get_condition_data(subjectID, folderPath, experiment_name, TP_row = 1, num_trials = 200, only_events = False):
     """
     Loads participant data. returns a list of pandas dataframes. Each dataframe is one trial.
     If only_events = True, only loads event codes.
