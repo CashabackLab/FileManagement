@@ -11,4 +11,4 @@ def create_folder(folder_name, path = ""):
     if not os.path.exists(full_path):
         os.makedirs(full_path)
         
-    return full_path
+    return os.path.abspath(full_path)
