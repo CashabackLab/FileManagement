@@ -1,5 +1,7 @@
 #allows usage of the function from the package name directly
 #i.e. file_management.varName()
+__version__ = "0.4.0
+
 from .get_condition_data import * 
 from .get_trial_table import * 
 from .get_target_table import * 
