@@ -6,8 +6,10 @@ def normpath(path):
   Normalizes path variables for your OS"""
   return os.path.normpath(path)
 
-def get_most_recent_file(path, key_string = "loss"):
-    """File names must end with date formated as DD_MM_YYYY"""
+def get_most_recent_file(path, key_string = "loss", dateformat = "DD_MM_YYYY"):
+    """dateformat : {"MM_DD_YYYY", "DD_MM_YYYY"}"""
+    if dateformat not in ["MM_DD_YYYY", "MM_DD_YYYY"]:
+        raise ValueError("Improper date format. set dateformat to either \"MM_DD_YYYY\" or \"DD_MM_YYYY\"")
     for (dirpath, dirnames, filenames) in os.walk(path):
         most_recent_year  = "0000"
         most_recent_month = "0"
@@ -26,8 +28,12 @@ def get_most_recent_file(path, key_string = "loss"):
                     date_flag = 1
                     #temp dat/time variables
                     year  = filename[-8:-4]
-                    month = filename[-11:-9]
-                    day   = filename[-14:-12]
+                    if dateformat == "MM_DD_YYY":
+                        day     = filename[-11:-9]
+                        month   = filename[-14:-12]
+                    else:
+                        month = filename[-11:-9]
+                        day   = filename[-14:-12]
                     time   = os.path.getctime(os.path.join(path, filename))
 
                     #Check if this file is more recent than the previous file
