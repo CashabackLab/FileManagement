@@ -19,7 +19,7 @@ setup(
     # Needed for dependencies
     install_requires=['numpy', 'varname'],
     # *strongly* suggested for sharing
-    version='0.4.3',
+    version=version,
     # The license can be anything you like
     license='MIT',
     description='Python package for managing file input/output and file saving, tailored for the Cashaback Lab',
