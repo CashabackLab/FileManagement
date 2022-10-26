@@ -1,11 +1,6 @@
 import os
 import os.path
 
-def normpath(path):
-  """Shorthand for os.path.normpath()
-  Normalizes path variables for your OS"""
-  return os.path.normpath(path)
-
 def get_most_recent_file(path, key_string = "loss", dateformat = "DD_MM_YYYY"):
     """dateformat : {"MM_DD_YYYY", "DD_MM_YYYY"}"""
     if dateformat not in ["MM_DD_YYYY", "MM_DD_YYYY"]:
