@@ -14,5 +14,5 @@ from varname import nameof, argname
 from .copyfolderstruct import *
 from importlib import reload
 
-from os.path import join, normpath, getctime, exists
+from os.path import join, normpath, getctime, exists, abspath
 from os import getcwd, mkdir, chdir
