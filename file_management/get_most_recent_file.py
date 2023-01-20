@@ -3,7 +3,7 @@ import os.path
 
 def get_most_recent_file(path, key_string = "loss", dateformat = "DD_MM_YYYY"):
     """dateformat : {"MM_DD_YYYY", "DD_MM_YYYY"}"""
-    if dateformat not in ["MM_DD_YYYY", "MM_DD_YYYY"]:
+    if dateformat not in ["MM_DD_YYYY", "DD_MM_YYYY"]:
         raise ValueError("Improper date format. set dateformat to either \"MM_DD_YYYY\" or \"DD_MM_YYYY\"")
     for (dirpath, dirnames, filenames) in os.walk(path):
         most_recent_year  = "0000"
