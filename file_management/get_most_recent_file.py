@@ -59,7 +59,7 @@ def get_most_recent_file(path, key_string = "", dateformat = "MM_DD_YYYY"):
                             most_recent_date["MM"] = month
                             if int(day) >= int(most_recent_date["DD"]):
                                 most_recent_date["DD"] = day
-                                most_recent_file = "".join(file_components.values())
+                    most_recent_file = "".join(file_components.values())
 
                 
         if not key_string_flag and not file_found_flag: raise FileNotFoundError(f"No file with key_string \"{key_string}\" exists.")
