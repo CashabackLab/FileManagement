@@ -53,8 +53,10 @@ def get_most_recent_file(path, key_string = "", dateformat = "MM_DD_YYYY"):
                     #Check if this file is more recent than the previous file
                     if int(year) >= int(most_recent_date["YYYY"]):
                         most_recent_date["YYYY"] = year
+                        most_recent_file = "".join(file_components.values())
                         if int(month) >= int(most_recent_date["MM"]):
                             most_recent_date["MM"] = month
+                            most_recent_file = "".join(file_components.values())
                             if int(day) >= int(most_recent_date["DD"]):
                                 most_recent_date["DD"] = day
                                 most_recent_file = "".join(file_components.values())
