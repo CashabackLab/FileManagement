@@ -19,6 +19,7 @@ def get_most_recent_file(path, key_string = "", dateformat = "MM_DD_YYYY"):
         file_found_flag = 0
         #for every file
         for i, filename in enumerate(filenames):
+            last_date = most_recent_date.copy()
             #check if key_string is in the filename and that the filename ends with the year
             if isinstance(key_string, list):
                 for key in key_string:
@@ -51,17 +52,18 @@ def get_most_recent_file(path, key_string = "", dateformat = "MM_DD_YYYY"):
                         day   = file_components["date"][0:2]
                        
                     #Check if this file is more recent than the previous file
+                    
                     if int(year) >= int(most_recent_date["YYYY"]):
                         most_recent_date["YYYY"] = year
-                        most_recent_file = "".join(file_components.values())
                         if int(month) >= int(most_recent_date["MM"]):
                             most_recent_date["MM"] = month
-                            most_recent_file = "".join(file_components.values())
                             if int(day) >= int(most_recent_date["DD"]):
                                 most_recent_date["DD"] = day
-                                most_recent_file = "".join(file_components.values())
+                                
+                    if last_date != most_recent_date:
+                        most_recent_file = "".join(file_components.values())
 
-                
+                    
         if not key_string_flag and not file_found_flag: raise FileNotFoundError(f"No file with key_string \"{key_string}\" exists.")
         if not date_flag and not file_found_flag: raise FileNotFoundError("No file with properly formatted date found.")
          
