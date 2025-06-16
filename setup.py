@@ -17,7 +17,7 @@ setup(
     # Needed to actually package something
     packages=['file_management'],
     # Needed for dependencies
-    install_requires=['numpy', 'varname', 'pandas'],
+    install_requires=['numpy', 'varname', 'pandas', 'dill'],
     # *strongly* suggested for sharing
     version=version,
     # The license can be anything you like

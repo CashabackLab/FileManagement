@@ -51,11 +51,15 @@ def get_most_recent_file(path, key_string = "", dateformat = "MM_DD_YYYY"):
                         month = file_components["date"][3:5]
                         day   = file_components["date"][0:2]
                        
+
                     #Check if this file is more recent than the previous file
-                    
                     if int(year) >= int(most_recent_date["YYYY"]):
+                        if int(year) > int(most_recent_date["YYYY"]):
+                            most_recent_date["MM"] = 0 # resetting our month to 0 if year is greater
                         most_recent_date["YYYY"] = year
                         if int(month) >= int(most_recent_date["MM"]):
+                            if int(month) > int(most_recent_date["MM"]):
+                                most_recent_date["DD"] = 0 # reset day to 0 if we find more recent month
                             most_recent_date["MM"] = month
                             if int(day) >= int(most_recent_date["DD"]):
                                 most_recent_date["DD"] = day
