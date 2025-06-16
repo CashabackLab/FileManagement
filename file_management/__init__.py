@@ -10,7 +10,8 @@ from .create_folder import create_folder
 from .varName import *
 from .get_most_recent_file import get_most_recent_file
 #from .nameof import nameof
-from varname import nameof, argname
+#from varname import nameof, argname # Not sure why adam put in nameof, but is causing issues, so commented out
+#from varname import argname
 from .copyfolderstruct import *
 from importlib import reload
 
